@@ -26,6 +26,7 @@ In this project you'll build an app that will keep track of memebers of a team. 
 - [ x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ x] Push commits: git push origin `<firstName-lastName>`.
 I made my new branch before the yarn start so i made a second branch to ttry to fix it 
+
 Follow these steps for completing your project.
 
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
