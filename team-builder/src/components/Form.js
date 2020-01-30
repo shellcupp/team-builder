@@ -2,8 +2,8 @@ import React, { useState} from 'react';
 
 const Form = props => {
     const [teamMember, setTeamMember] = useState({
-        name: '',
-        role: ''
+        name: 'Default',
+        role: 'Default'
     });
 const handleChange = e => {
     setTeamMember({...teamMember, [e.target.name]: e.target.value})
@@ -17,7 +17,7 @@ const submitForm = e => {
 
 return(
     <form onSubmit={submitForm}>
-    <label htmlFor='name'>Name</label>
+    <label htmlFor='name'> Name </label>
     <input
      id='name'
      type='text'
@@ -26,7 +26,16 @@ return(
      value={teamMember.name}
      onChange={handleChange}
     />
-    <label htmlFor='role'>Role</label>
+    <label htmlFor='email'> Email </label>
+    <input
+    id='email'
+    type='email'
+    name='email'
+    placeholder='Enter Email'
+    value={teamMember.email}
+    onChange={handleChange}
+    />
+    <label htmlFor='role'> Role </label>
     <input
     id='role'
     type='text'
