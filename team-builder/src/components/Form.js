@@ -2,8 +2,9 @@ import React, { useState} from 'react';
 
 const Form = props => {
     const [teamMember, setTeamMember] = useState({
-        name: 'Default',
-        role: 'Default'
+        // name: 'Default',
+        // email: 'Default@Default.com',
+        // role: 'Default'
     });
 const handleChange = e => {
     setTeamMember({...teamMember, [e.target.name]: e.target.value})

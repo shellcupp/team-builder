@@ -5,13 +5,7 @@ import './App.css';
 
 function App(props) {
   const [teamMember, setTeamMember] = useState
-  ([
-    {
-      name:'Default',
-      email:'Default',
-      role:'Default'
-    }
-  ]);
+  ([]);
  
   const addTeamMember = person => {
     const newTeamMember = {
@@ -21,10 +15,11 @@ function App(props) {
     };
     setTeamMember([...teamMember, newTeamMember]);
   };
+
 //getting ready to add edit members
 //add edit button
   return (
-    <div className="App">
+    <div>
         <h1>Team Member List</h1>
         <Form addTeamMember={addTeamMember}/>
         <TeamMembers teamMember={teamMember}/>
