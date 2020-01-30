@@ -1,19 +1,20 @@
 import React, { useState} from 'react';
 
 const Form = props => {
-    const [teamMember, setTeamMember] = useState({
-        // name: 'Default',
-        // email: 'Default@Default.com',
-        // role: 'Default'
-    });
+const [teamMember, setTeamMember] = useState({});
+
 const handleChange = e => {
     setTeamMember({...teamMember, [e.target.name]: e.target.value})
 };
 
 const submitForm = e => {
     e.preventDefault();
+    if (teamMember.name.trim().length === 0 ){
+    return
+    };
+    
     props.addTeamMember(teamMember);
-    setTeamMember({name:'', role:''});
+    setTeamMember({name:'',email:'', role:''});
 };
 
 return(
@@ -45,7 +46,7 @@ return(
     value={teamMember.role}
     onChange={handleChange}
     />
-    <button type='submit'>Add Team Member</button>
+    <button type='submit'> Add Team Member </button>
     </form>
 )
 }
