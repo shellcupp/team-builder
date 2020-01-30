@@ -21,7 +21,7 @@ function App(props) {
     };
     setTeamMember([...teamMember, newTeamMember]);
   };
-//get ready to edit members
+//getting ready to add edit members
 //add edit button
   return (
     <div className="App">
